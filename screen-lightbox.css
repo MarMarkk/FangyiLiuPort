@@ -1,0 +1,10 @@
+button.aplus-screen__image{display:block;width:100%;padding:0;text-align:left;cursor:zoom-in;font:inherit}
+.screen-lightbox{position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;color:#fff;overflow:hidden}
+.screen-lightbox::backdrop{background:rgba(14,15,19,.88);backdrop-filter:blur(12px)}
+.screen-lightbox__toolbar{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 30px;background:#16171bcc;position:relative;z-index:1}
+.screen-lightbox__toolbar span{font-size:16px;line-height:1.4}
+.screen-lightbox__toolbar button{border:1px solid #ffffff60;background:#ffffff12;color:white;border-radius:30px;padding:10px 20px;font:inherit;font-size:15px;cursor:pointer}
+.screen-lightbox__toolbar button:focus-visible{outline:2px solid white;outline-offset:3px}
+.screen-lightbox__scroll{height:calc(100% - 72px);overflow:auto;overscroll-behavior:contain;padding:28px 20px 48px;text-align:center}
+.screen-lightbox__scroll img{display:block;width:min(680px,100%);height:auto;margin:0 auto;border-radius:14px;box-shadow:0 16px 60px #0005}
+@media(max-width:600px){.screen-lightbox__toolbar{padding:12px 16px}.screen-lightbox__scroll{padding:16px 12px 32px}.screen-lightbox__scroll img{border-radius:10px}}

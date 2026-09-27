@@ -1,0 +1,48 @@
+.film-layout.contact-view .contact-layout{width:calc(100% - 112px);max-width:1240px;margin:auto;padding:190px 0 100px;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(50px,7vw,110px);row-gap:68px;min-height:calc(100svh - 130px);align-content:center}
+.contact-heading{grid-column:1/-1}
+.contact-view .section-label{display:flex;align-items:center;gap:20px;font-size:11px;letter-spacing:.18em;color:#818181;margin:0 0 28px}
+.contact-view .section-label:after{content:'';height:1px;background:#e5e5e7;flex:1}
+.contact-heading h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(42px,4.6vw,68px);font-weight:600;line-height:1.1;letter-spacing:-.05em;margin:0}
+.contact-intro h2{font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:500;line-height:1.3;letter-spacing:-.025em;margin:0 0 12px}
+.contact-lead{font-size:16px;line-height:1.8;color:#818181;margin:0;max-width:480px}
+.contact-link-list{display:grid;gap:12px;margin-top:34px;max-width:390px}
+.contact-link{display:flex;align-items:center;gap:18px;min-height:64px;padding:12px 0;transition:transform .3s;color:#454545;font-size:16px}
+.contact-link svg{width:25px;height:25px;flex:none}
+.contact-link small{display:block;font-size:13px;line-height:1.5;color:#888;margin-top:5px;overflow-wrap:anywhere}
+.contact-arrow{margin-left:auto;color:#8a8a8a;font-size:20px}
+.linkedin-icon{display:grid;place-items:center;flex:none;width:25px;height:25px;font:bold 19px Arial,sans-serif;color:#fff;background:#2e6785;border-radius:4px}
+.contact-copy{background:none;border:0;border-bottom:1px solid #bdbdbd;color:#777;padding:0 0 3px;margin-top:22px;font:inherit;font-size:12px;cursor:pointer}
+.contact-view .copy-status{font-size:12px;color:#666;min-height:18px;margin-top:10px}
+.contact-field-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.contact-compose label{display:block;font-size:11px;letter-spacing:.1em;color:#818181;margin:0 0 10px}
+.contact-compose label[for=contact-message]{margin-top:24px}
+.contact-compose input,.contact-compose textarea{display:block;width:100%;min-width:0;box-sizing:border-box;font:inherit;font-size:15px;line-height:1.6;color:#222;background:#fff;border:1px solid #dedee1;border-radius:14px;padding:16px 18px;box-shadow:0 1px 2px #00000003;transition:border-color .2s}
+.contact-compose input::placeholder,.contact-compose textarea::placeholder{color:#a0a0a0}
+.contact-compose textarea{resize:vertical;min-height:156px}
+.contact-compose input:focus,.contact-compose textarea:focus{outline:2px solid #8b8b94;outline-offset:3px;border-color:#8b8b94}
+.contact-compose .dark-pill{width:100%;margin-top:20px;display:flex;justify-content:center;gap:12px;cursor:pointer;font:inherit;font-size:14px;font-weight:500;padding:15px 22px;background:#111;border:1px solid #111;box-shadow:none}
+.contact-form-note,.contact-compose #contact-status{font-size:12px;line-height:1.6;color:#888;margin-top:14px}
+.film-layout.contact-view footer{padding:0 56px 24px;background:#fdfdfd;max-width:1352px;margin:auto}
+.film-layout.contact-view footer:before{display:none}
+.film-layout.contact-view .footer-bottom{padding-top:24px;border-top:1px solid #ebebed}
+@media(hover:hover){.contact-link:hover{transform:translateX(4px);color:#111}}
+@media(max-width:800px){.film-layout.contact-view .contact-layout{width:calc(100% - 48px);padding:140px 0 60px;grid-template-columns:1fr;gap:36px;min-height:0}.contact-heading{grid-column:auto}.contact-heading h1{font-size:44px}.contact-link-list{margin-top:20px}.film-layout.contact-view footer{padding:0 24px 24px}}
+@media(max-width:400px){.contact-field-row{grid-template-columns:1fr;gap:20px}.contact-heading h1{font-size:38px}}
+@media(prefers-reduced-motion:reduce){.contact-link{transition:none}.contact-link:hover{transform:none}}
+
+/* Email composition panel */
+.contact-compose{align-self:start;padding:clamp(26px,3.5vw,48px);border:1px solid #e6e4e0;border-radius:24px;background:linear-gradient(145deg,#fff 0%,#faf9f7 100%);box-shadow:0 22px 60px rgba(30,26,20,.055)}
+.compose-heading{margin-bottom:32px}
+.compose-kicker{display:block;margin-bottom:17px;font-size:10px;font-weight:600;letter-spacing:.19em;color:#77736e}
+.compose-heading h2{margin:0 0 9px;font-family:Georgia,'Times New Roman',serif;font-size:clamp(27px,2.5vw,36px);font-weight:500;letter-spacing:-.045em;line-height:1.16}
+.compose-dot{color:#bc917c}
+.compose-heading p{margin:0;font-size:14px;line-height:1.6;color:#777}
+.contact-compose label[for=contact-subject]{margin-top:24px}
+.contact-compose input,.contact-compose textarea{background:#fff;border-color:#e5e2de;border-radius:10px;box-shadow:none}
+.contact-compose input:focus,.contact-compose textarea:focus{outline:2px solid #b9a294;outline-offset:2px;border-color:#b9a294}
+.contact-compose .dark-pill{min-height:54px;border-radius:999px;justify-content:space-between;padding-inline:24px;transition:background .2s,transform .2s}
+.contact-compose .dark-pill:hover{background:#38332f;transform:translateY(-2px)}
+.contact-compose .dark-pill span{font-size:19px;line-height:1}
+.contact-compose #contact-status:not(:empty){padding:12px 14px;border:1px solid #dcd7d0;border-radius:10px;background:#f5f2ed;color:#4d4843}
+@media(max-width:800px){.contact-compose{padding:clamp(22px,5vw,34px)}}
+@media(prefers-reduced-motion:reduce){.contact-compose .dark-pill{transition:none}.contact-compose .dark-pill:hover{transform:none}}

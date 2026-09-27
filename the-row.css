@@ -1,0 +1,135 @@
+/* The Row: a quiet editorial layout for the actual WordPress course website. */
+.row-project__intro{
+  width:64%;
+  margin-left:auto;
+}
+.film-layout .row-project-head .lead{
+  width:100%;
+  margin-left:0;
+}
+.row-project__visit{
+  min-height:58px;
+  margin-top:32px;
+  padding:16px 28px;
+  gap:28px;
+  font-size:clamp(17px,1.1vw,22px);
+  line-height:1.4;
+}
+.row-project__visit:focus-visible{
+  outline:3px solid #333;
+  outline-offset:6px;
+}
+.row-project__facts{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:var(--column-gap);
+  padding:32px 0 clamp(44px,4vw,88px);
+  margin:0;
+}
+.row-project__facts>div{min-width:0}
+.row-project__facts dt{
+  font-size:clamp(14px,.9vw,18px);
+  letter-spacing:.08em;
+  line-height:1.5;
+  color:#6b6b6b;
+}
+.row-project__facts dd{
+  margin:14px 0 0;
+  font-size:clamp(20px,1.6vw,32px);
+  font-weight:500;
+  line-height:1.45;
+  letter-spacing:-.025em;
+}
+.row-project__pages{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:clamp(20px,2vw,44px);
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.film-layout .row-project__pages li{
+  min-width:0;
+  margin:0;
+  padding-top:24px;
+  border-top:1px solid #ccc;
+}
+.row-project__page-number{
+  display:block;
+  margin-bottom:28px;
+  font-size:18px;
+  line-height:1.2;
+  color:#707070;
+}
+.row-project__pages h3{
+  margin:0 0 14px;
+  font-size:clamp(22px,1.7vw,34px);
+  font-weight:500;
+  line-height:1.2;
+  letter-spacing:-.035em;
+}
+.film-layout .row-project__pages p{
+  font-size:clamp(17px,1.1vw,23px);
+  line-height:1.6;
+}
+.film-layout .case-section .row-project__skill-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  list-style:none;
+  margin:30px 0 0;
+  padding:0;
+}
+.film-layout .row-project__skill-tags li{
+  margin:0;
+  padding:9px 15px;
+  border:1px solid #ddd;
+  border-radius:4px;
+  font-size:clamp(15px,1vw,20px);
+  line-height:1.4;
+  color:#3d3d3d;
+}
+.row-project__features{
+  display:grid;
+  gap:32px;
+}
+.row-project__features>div+div{
+  padding-top:32px;
+  border-top:1px solid #ececec;
+}
+.row-project__features h3{
+  margin:0 0 14px;
+  font-size:clamp(23px,1.75vw,36px);
+  font-weight:500;
+  line-height:1.3;
+  letter-spacing:-.025em;
+}
+@media(max-width:1000px){
+  .row-project__intro{width:72%}
+  .row-project__pages{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:36px}
+  .row-project__facts{gap:28px}
+}
+@media(max-width:700px){
+  .row-project__intro{width:100%}
+  .row-project__visit{margin-top:26px;min-height:56px;padding:15px 24px;font-size:17px}
+  .row-project__facts{grid-template-columns:minmax(0,1fr);padding:0 0 40px;gap:28px}
+  .row-project__facts dd{margin-top:8px;font-size:22px}
+  .row-project__pages{grid-template-columns:minmax(0,1fr);gap:24px}
+  .film-layout .row-project__pages li{
+    display:grid;
+    grid-template-columns:44px minmax(0,1fr);
+    column-gap:16px;
+    row-gap:8px;
+    padding-top:24px;
+  }
+  .row-project__page-number{grid-row:1/3;margin:5px 0 0;font-size:16px}
+  .row-project__pages h3{margin:0;font-size:24px}
+  .film-layout .row-project__pages p{font-size:18px}
+  .row-project__features{gap:26px}
+  .row-project__features>div+div{padding-top:26px}
+  .row-project__features h3{font-size:24px}
+}
+
+.film-layout .row-project__logo{margin-bottom:48px;}
+.film-layout .row-project__logo img{width:min(100%,480px);max-width:480px;max-height:360px;object-fit:contain;}

@@ -1,0 +1,25 @@
+/* Reference-inspired grotesk name treatment, scoped to the homepage hero. */
+.film-layout .portrait-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-synthesis: none;
+  letter-spacing: .055em;
+  gap: .36em;
+  line-height: .9;
+}
+.film-layout .portrait-name .outline-name {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: clamp(1.5px, .32vw, 5px) #292929;
+  paint-order: stroke fill;
+}
+.film-layout .portrait-name .solid-name {
+  color: #292929;
+  -webkit-text-fill-color: #292929;
+  -webkit-text-stroke: 0;
+}
+@media (max-width: 700px) {
+  .film-layout .portrait-name {letter-spacing: .035em; gap: .3em;}
+  .film-layout .portrait-name .outline-name {-webkit-text-stroke-width: 1.5px;}
+}

@@ -1,0 +1,25 @@
+
+.film-layout .experience-panel{background:#292929;color:#f7f7f7;width:calc(100% - 48px);margin:24px auto;border-radius:12px;padding:clamp(40px,5.5vw,100px);overflow:hidden;}
+.film-layout .experience-panel__heading{position:relative;isolation:isolate;display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding-top:34px;margin-bottom:54px;}
+.experience-panel__ghost{position:absolute;z-index:-1;top:-24px;left:-5px;font-size:clamp(58px,10.2vw,180px);line-height:1;letter-spacing:.025em;font-weight:700;color:#343434;pointer-events:none;white-space:nowrap;}
+.film-layout .experience-panel__heading h1,.film-layout .experience-panel__heading h2{color:#fff;font-size:clamp(32px,4vw,64px);font-weight:500;line-height:1.1;letter-spacing:-.04em;margin:0;}
+.film-layout .experience-panel__heading>p{font-size:clamp(14px,1.3vw,21px);color:#d0d0d0;margin:0;line-height:1.5;}
+.experience-entry{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:40px;row-gap:24px;padding:34px 12px 36px;border-bottom:1px solid #4a4a4a;}
+.film-layout .experience-entry__identity h2,.film-layout .experience-entry__identity h3{font-size:clamp(21px,1.9vw,30px);font-weight:500;line-height:1.4;letter-spacing:-.02em;margin:0 0 10px;color:#f5f5f5;}
+.film-layout .experience-entry__identity>p{font-size:clamp(18px,1.5vw,24px);color:#bdbdbd;line-height:1.5;margin:0;}
+.film-layout .experience-entry__dates{color:#bdbdbd;font-size:clamp(16px,1.5vw,24px);align-self:center;white-space:nowrap;margin:0;line-height:1.5;}
+.film-layout .experience-entry__details{grid-column:1/-1;max-width:960px;padding-left:20px;margin:0;list-style:disc;}
+.film-layout .experience-entry__details li{font-size:clamp(16px,1.1vw,20px);line-height:1.75;color:#d0d0d0;margin:0 0 8px;padding-left:4px;}
+.experience-entry__details li::marker{color:#838383;}
+.film-layout main.experience-page{padding-top:130px;background:#fdfdfd;}
+.experience-page .experience-panel{margin-top:24px;margin-bottom:64px;}
+@media(max-width:700px){
+ .film-layout .experience-panel{width:calc(100% - 24px);padding:32px 22px;border-radius:10px;}
+ .film-layout .experience-panel__heading{display:block;margin-bottom:30px;padding-top:22px;}
+ .experience-panel__ghost{top:0;font-size:11vw;}
+ .film-layout .experience-panel__heading>p{margin-top:18px;font-size:14px;}
+ .experience-entry{grid-template-columns:1fr;padding:26px 0;gap:16px;}
+ .film-layout .experience-entry__dates{grid-row:2;font-size:15px;}
+ .film-layout .experience-entry__details{grid-column:1;}
+ .film-layout main.experience-page{padding-top:92px;}
+}

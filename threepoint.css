@@ -1,0 +1,105 @@
+/* Match the two original screenshot proportions without cropping either one. */
+.threepoint-content__grid{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:minmax(0,.62fr) minmax(0,1fr);
+  align-items:start;
+  gap:clamp(28px,4vw,96px);
+}
+.threepoint-content__card{margin:0;min-width:0}
+.threepoint-content__platform{
+  display:block;
+  margin-bottom:20px;
+  font-size:var(--label-size);
+  font-weight:600;
+  letter-spacing:.08em;
+  line-height:1.6;
+  color:#466454;
+}
+.threepoint-content__image{
+  display:block;
+  overflow:hidden;
+  border:1px solid #e3e9e5;
+  border-radius:16px;
+  background:#f5f8f6;
+  box-shadow:0 20px 40px -28px #193b2833;
+  cursor:zoom-in;
+}
+.threepoint-content__image img{
+  display:block;
+  width:100%;
+  height:auto;
+  filter:none;
+}
+.threepoint-content__card figcaption{padding-top:28px}
+.threepoint-content__card h3{
+  margin:0 0 18px;
+  font-size:clamp(26px,2.2vw,44px);
+  font-weight:600;
+  line-height:1.2;
+  letter-spacing:-.035em;
+}
+.film-layout .threepoint-content__card p{
+  font-size:clamp(18px,1.15vw,25px);
+  line-height:1.75;
+  color:#505b53;
+}
+.film-layout .threepoint-content__card .threepoint-content__message{
+  margin-top:22px;
+  color:#265a3e;
+  font-weight:500;
+}
+@media(max-width:850px){
+  .threepoint-content__grid{grid-template-columns:minmax(0,1fr);gap:52px}
+  .threepoint-content__platform{margin-bottom:16px}
+  .threepoint-content__card figcaption{padding-top:24px}
+  .threepoint-content__card h3{font-size:28px}
+}
+
+/* Give audit evidence and campaign goals the complete case-study width. */
+.threepoint-evidence{
+  grid-column:1/-1;
+  width:100%;
+  min-width:0;
+  margin:0;
+}
+.threepoint-evidence__image{
+  display:block;
+  overflow:hidden;
+  border:1px solid #e2e8e4;
+  border-radius:20px;
+  background:#fff;
+  cursor:zoom-in;
+}
+.threepoint-evidence__image picture,
+.threepoint-evidence__image img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:none;
+}
+.threepoint-evidence__image img{object-fit:contain;filter:none}
+.threepoint-evidence figcaption{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:12px 32px;
+  padding-top:20px;
+  font-size:clamp(15px,1vw,20px);
+  line-height:1.6;
+  color:#59655e;
+}
+.threepoint-evidence figcaption a{
+  color:#215a40;
+  text-decoration:underline;
+  text-underline-offset:5px;
+}
+.threepoint-evidence a:focus-visible{
+  outline:3px solid #008354;
+  outline-offset:6px;
+}
+@media(max-width:700px){
+  .threepoint-evidence__image{border-radius:12px}
+  .threepoint-evidence figcaption{padding-top:16px;gap:10px;font-size:15px}
+}

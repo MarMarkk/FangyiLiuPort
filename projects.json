@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "aplus",
+    "title": "APlus",
+    "category": "Research / Experience design",
+    "image": "aplus-logo.jpg",
+    "intro": "A more supportive wearable experience.",
+    "challenge": "Understand what frequent users need beyond a list of features.",
+    "approach": "Heavy-user interviews and persona analysis informed a prototype focused on a clearer, more supportive experience.",
+    "role": "User research · Heavy User persona · Independent prototype design"
+  },
+  {
+    "slug": "3point",
+    "title": "3Point Foundation",
+    "category": "Digital marketing / Content strategy",
+    "image": "3point-logo.jpg",
+    "intro": "Helping a meaningful mission find its audience.",
+    "challenge": "Make an organization’s purpose easier to discover and understand online.",
+    "approach": "An SEO audit examined discoverability and content opportunities, translating research into practical recommendations.",
+    "role": "Individual audience persona · Content calendar · Team campaign planning"
+  },
+  {
+    "slug": "the-row",
+    "title": "The Row",
+    "category": "Web design / Editorial direction",
+    "image": "the-row-logo-hd.png",
+    "intro": "An exercise in quiet digital expression.",
+    "challenge": "Explore how typography, pacing and imagery can express a restrained visual identity.",
+    "approach": "A website study exploring editorial hierarchy, product storytelling and a considered browsing experience.",
+    "role": "Independent website study · Visual exploration"
+  }
+]

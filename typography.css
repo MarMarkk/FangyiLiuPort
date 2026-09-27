@@ -1,0 +1,139 @@
+@font-face{
+  font-family:'Inter';
+  src:url('assets/fonts/inter-latin-variable.woff2') format('woff2');
+  font-style:normal;
+  font-weight:400 800;
+  font-display:swap;
+}
+:root{--font-sans:'Inter',Arial,sans-serif}
+body,button,input,textarea,select{font-family:var(--font-sans)}
+h1,h2,h3,.film-layout .portrait-name,.film-layout .hero-bio h2,
+.film-layout .film-heading h2,.film-layout .footer-top>a,
+.work-heading h1,.work-heading h2,.work-caption h3,
+.marquee-track,.name-stage h1{font-family:var(--font-sans)}
+body{font-optical-sizing:auto;-webkit-font-smoothing:antialiased}
+
+/* The outlined first name and solid surname share the reference's bold weight. */
+.portrait-stage{--home-name-size:clamp(136px,14.5vw,260px)}
+.film-layout .portrait-name{
+  font-weight:800;
+  font-size:var(--home-name-size);
+  line-height:.82;
+  letter-spacing:.035em;
+  gap:.42em;
+}
+.film-layout .portrait-name .outline-name{-webkit-text-stroke:calc(var(--home-name-size) * .02) #222}
+.film-layout .portrait-name .solid-name{color:#222}
+.hero-person.home-cutout-photo{
+  top:calc(19% + var(--home-name-size) * .82 + 28px);
+  height:calc(81% - var(--home-name-size) * .82 - 44px);
+  max-width:min(44vw,580px);
+}
+
+/* Keep the supporting copy and links near the central portrait on wide screens. */
+.film-layout .hero-bio{
+  left:max(8.25%,calc(50% - 785px));
+  top:64%;
+  width:clamp(320px,24vw,440px);
+  max-width:none;
+}
+.film-layout .hero-bio .eyebrow{
+  font-size:12px;
+  letter-spacing:.09em;
+  margin-bottom:14px;
+}
+.film-layout .hero-bio h2{
+  font-size:clamp(24px,1.8vw,32px);
+  font-weight:600;
+  line-height:1.2;
+  letter-spacing:-.025em;
+  white-space:nowrap;
+}
+.film-layout .hero-bio>p:not(.eyebrow){
+  max-width:none;
+  font-size:clamp(16px,1vw,18px);
+  line-height:1.65;
+  letter-spacing:0;
+  margin:18px 0 26px;
+}
+.film-layout .hero-bio .dark-pill{
+  min-height:48px;
+  padding:13px 24px;
+  font-size:15px;
+  font-weight:500;
+}
+.film-layout .hero-social{
+  right:max(8.25%,calc(50% - 785px));
+  top:min(66%,calc(100% - 258px));
+  width:clamp(200px,14vw,236px);
+  max-width:none;
+  gap:26px;
+}
+.film-layout .hero-social a{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  width:100%;
+  min-width:0;
+  min-height:60px;
+  padding:16px 24px;
+  font-size:16px;
+  line-height:1.3;
+  font-weight:500;
+  border:1px solid #e8e8e8;
+  border-radius:36px;
+  background:#fff;
+  box-shadow:0 3px 12px #00000004;
+}
+
+@media(min-width:1001px) and (max-width:1199px){
+  .film-layout .hero-bio{left:5.5%;width:27%;}
+  .film-layout .hero-bio h2{font-size:21px;}
+  .film-layout .hero-bio>p:not(.eyebrow){font-size:16px;}
+  .film-layout .hero-social{right:5.5%;width:180px;gap:22px;}
+  .film-layout .hero-social a{min-height:54px;padding:14px 20px;}
+}
+
+@media(max-width:1000px){
+  .film-layout .portrait-stage{min-height:960px;--home-name-size:14vw;}
+  .film-layout .portrait-name{top:15%;gap:.36em;}
+  .hero-person.home-cutout-photo{
+    top:calc(15% + var(--home-name-size) * .82 + 24px);
+    height:36%;
+    max-width:76vw;
+  }
+  .film-layout .hero-bio{
+    left:48.5%;
+    top:auto;
+    bottom:140px;
+    width:min(84%,520px);
+    transform:translateX(-50%);
+  }
+  .film-layout .hero-bio .eyebrow{display:none;}
+  .film-layout .hero-bio h2{font-size:24px;}
+  .film-layout .hero-bio>p:not(.eyebrow){font-size:16px;margin:12px 0 20px;}
+  .film-layout .hero-social{
+    display:grid;
+    grid-template-columns:1fr .85fr 1.3fr;
+    left:51.5%;
+    right:auto;
+    top:auto;
+    bottom:50px;
+    width:min(88%,620px);
+    gap:16px;
+    transform:translateX(-50%);
+  }
+  .film-layout .hero-social a{display:flex;min-height:50px;padding:12px 16px;font-size:15px;gap:8px;}
+}
+
+@media(max-width:700px){
+  .film-layout .portrait-stage{min-height:860px;}
+  .film-layout .portrait-name{letter-spacing:.025em;gap:.34em;}
+  .film-layout .portrait-name .outline-name{-webkit-text-stroke:1px #171717;}
+  .film-layout .hero-bio h2{font-size:clamp(19px,5.2vw,24px);}
+  .film-layout .hero-bio .dark-pill{min-height:46px;padding:12px 20px;}
+  .film-layout .hero-social{gap:12px;}
+  .film-layout .hero-social a{min-height:48px;padding:10px 12px;font-size:14px;gap:6px;}
+  .film-layout .hero-social a>span:last-child{display:none;}
+}

@@ -1,0 +1,26 @@
+.film-layout.point-case .case-section>div.plan-audit-layout{max-width:none;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:32px;align-items:center}
+.plan-audit-layout figure{margin:0;min-width:0}
+.plan-preview{display:block;width:100%;padding:0;border:1px solid #e7e7eb;border-radius:12px;background:#fafafa;overflow:hidden;cursor:zoom-in}
+.plan-preview img{display:block;width:100%;height:auto;object-fit:contain}
+.plan-audit-layout figcaption h3{font-size:13px;line-height:1.5;color:#777;font-weight:400;margin:14px 0 0}
+.plan-audit-grades{display:flex;gap:36px;margin:0 0 22px}
+.plan-audit-grades dt{font-size:13px;color:#777;margin-bottom:8px}
+.plan-audit-grades dd{font-size:38px;line-height:1.2;margin:0;font-weight:500}
+.film-layout.point-case .plan-audit-layout p,.film-layout.point-case .plan-audit-layout li{font-size:16px;line-height:1.75}
+.film-layout.point-case .plan-research-flow{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:28px 0;padding:0}
+.film-layout.point-case .plan-research-flow li{margin:0;padding:22px 18px;background:#fafafa;border:1px solid #e7e7ea;border-radius:12px}
+.plan-research-flow span{font-size:11px;line-height:1.7;color:#777;letter-spacing:.045em;display:block;margin-bottom:12px}
+.film-layout.point-case .plan-research-flow p{font-size:15px;line-height:1.7;margin:0}
+.plan-message-table{min-width:900px;table-layout:fixed}
+.plan-message-table tbody th{width:auto}
+.plan-message-table td:last-child{min-width:0}
+.film-layout.point-case .point-contribution-grid .plan-content-purpose{font-size:14px;line-height:1.7;color:#777;margin:12px 0}
+.point-case .threepoint-content__grid{margin-top:28px}
+.point-case .threepoint-content__card .plan-preview{height:500px;padding:16px}
+.point-case .threepoint-content__card .plan-preview img{height:100%;width:100%;object-fit:contain}
+.plan-concept-details{margin:0}
+.plan-concept-details>div{display:grid;grid-template-columns:115px minmax(0,1fr);gap:14px;padding:13px 0;border-bottom:1px solid #ededee}
+.plan-concept-details dt{font-size:12px;color:#777;line-height:1.7}
+.plan-concept-details dd{margin:0;font-size:15px;line-height:1.7;color:#555}
+@media(max-width:1000px){.film-layout.point-case .plan-research-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.film-layout.point-case .case-section>div.plan-audit-layout{grid-template-columns:1fr}.plan-audit-layout figure{max-width:850px}}
+@media(max-width:700px){.film-layout.point-case .plan-research-flow{grid-template-columns:1fr}.point-case .threepoint-content__card .plan-preview{height:440px}.plan-concept-details>div{grid-template-columns:95px minmax(0,1fr);gap:10px}}

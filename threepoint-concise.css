@@ -1,0 +1,18 @@
+/* Concise 3Point case study; shared portfolio styles remain unchanged. */
+.point-case .plan-audit-grades{margin-top:24px}
+.point-case .strategy-flow{font-size:clamp(16px,1.4vw,22px);line-height:1.8;margin:26px 0 12px;color:#555}
+.point-case .strategy-ctas{font-size:16px;line-height:1.8}
+.point-case .strategy-ctas strong{margin-right:16px}
+.point-case .strategy-examples .plan-concept-details>div{grid-template-columns:100px minmax(0,1fr);padding:10px 0}
+.point-case .strategy-examples .plan-concept-details>div:last-child{border:0}
+.point-case .compact-funnel h3{font-size:18px;margin:0}
+.point-case .compact-funnel li>span{text-transform:uppercase;margin-bottom:10px}
+.point-case .targets-heading{font-size:23px;margin:36px 0 10px}
+.point-case .measurement-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:30px 0 0;padding-top:26px;border-top:1px solid #e7e7ea}
+.point-case .measurement-row dt{font-size:15px;font-weight:500;margin-bottom:9px}
+.point-case .measurement-row dd{font-size:14px;line-height:1.7;color:#777;margin:0}
+.point-case .plan-research-flow li{position:relative}
+.point-case .plan-research-flow li:not(:last-child):after{content:'→';position:absolute;right:-14px;top:44%;color:#888;z-index:1}
+.point-case #audience-insight,.point-case #threepoint-content-title{scroll-margin-top:140px}
+@media(max-width:1000px){.point-case .plan-research-flow li:nth-child(2):after{display:none}}
+@media(max-width:700px){.point-case .measurement-row{grid-template-columns:repeat(2,minmax(0,1fr))}.point-case .plan-research-flow li:after{display:none}.point-case .strategy-examples .plan-concept-details>div{grid-template-columns:85px minmax(0,1fr)}}
