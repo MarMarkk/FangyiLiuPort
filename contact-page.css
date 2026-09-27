@@ -46,3 +46,4 @@
 .contact-compose #contact-status:not(:empty){padding:12px 14px;border:1px solid #dcd7d0;border-radius:10px;background:#f5f2ed;color:#4d4843}
 @media(max-width:800px){.contact-compose{padding:clamp(22px,5vw,34px)}}
 @media(prefers-reduced-motion:reduce){.contact-compose .dark-pill{transition:none}.contact-compose .dark-pill:hover{transform:none}}
+.contact-compose .dark-pill:disabled{opacity:.6;cursor:wait;transform:none}

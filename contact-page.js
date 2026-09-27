@@ -1,20 +1,40 @@
 (() => {
   const form = document.querySelector('#contact-form');
   if (!form) return;
-  form.addEventListener('submit', event => {
+
+  const status = document.querySelector('#contact-status');
+  const button = form.querySelector('[type="submit"]');
+  const buttonLabel = button.querySelector('.button-label');
+
+  form.addEventListener('submit', async event => {
     event.preventDefault();
     if (!form.reportValidity()) return;
-    const name = form.elements.namedItem('name').value.trim();
-    const email = form.elements.namedItem('email').value.trim();
-    const topic = form.elements.namedItem('subject').value.trim();
-    const subject = `${topic} — from ${name}`;
-    const message = form.elements.namedItem('body').value.trim();
-    if (!name || !email || !topic || !message) {
-      document.querySelector('#contact-status').textContent = 'Please complete all four fields.';
-      return;
+
+    status.textContent = '';
+    button.disabled = true;
+    buttonLabel.textContent = 'Sending…';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) {
+        status.textContent = response.status === 429
+          ? 'Too many messages were sent recently. Please wait a moment and try again.'
+          : 'Your message could not be sent. Please try again or email me directly.';
+        return;
+      }
+
+      form.reset();
+      status.textContent = 'Thanks for reaching out! Your message has been sent.';
+    } catch {
+      status.textContent = 'Could not connect. Please check your connection or email me directly.';
+    } finally {
+      button.disabled = false;
+      buttonLabel.textContent = 'Send message';
     }
-    const body = `${message}\n\nFrom: ${name}\nEmail: ${email}`;
-    window.location.href = `mailto:emilyyxin1234@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    document.querySelector('#contact-status').textContent = 'Your email draft is ready. Please review and send it in your email app. If it did not open, use the email link on the left.';
   });
 })();
